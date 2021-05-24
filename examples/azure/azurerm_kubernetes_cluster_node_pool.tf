@@ -61,7 +61,7 @@ resource "azurerm_kubernetes_cluster_node_pool" "example_spot_pool" {
     "kubernetes.azure.com/scalesetpriority" = "spot"
   }
   node_taints = [
-    "kubernetes.azure.com/scalesetpriority=spot:NoSchedule"
+    "kubernetes.azure.com/scalesetpriority=spot:NoSchedule",
     "client=client1:NoExecute"
   ]
 }
